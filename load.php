@@ -24,5 +24,5 @@ spl_autoload_register('classAutoLoad');
 // Create instances of all the classes
 $menuObj = new menus();
 $layoutsObj = new layouts();
-$headingsObj - new headings();
+$headingsObj = new headings();
 $contentsObj = new contents();
