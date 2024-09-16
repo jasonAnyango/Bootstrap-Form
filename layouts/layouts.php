@@ -16,7 +16,7 @@ class layouts
                 <link rel="icon"  href="img/report.png">
                 <title>Sign Up</title>
             </head>
-            <body>
+            <body class = "d-flex flex-column min-vh-100">
         <?php
     }
 
@@ -24,6 +24,9 @@ class layouts
     public function footer()
     {
         ?>
+            <div class="container-fluid text-bg-dark text-center mt-auto p-2">
+                <p>Jason Anyango Copyright &copy; <?php echo date('Y') ?></p>
+            </div>
             </body>
             </html>
         <?php

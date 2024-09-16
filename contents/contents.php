@@ -5,7 +5,7 @@ class contents
     public function formContent()
     {
         ?>
-        <div class="container">
+        <div class="container mb-5">
         <form action="" style = "border: 1px solid #000;" class="p-5 rounded">
             <!-- First Row -->
             <div class="row mb-5 mt-5">
