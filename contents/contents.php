@@ -13,13 +13,13 @@ class contents
                     <label for="email" class="form-label">Email:</label>
                 </div>
                 <div class="col-sm-5">
-                    <input type="text" class="form-control text-center" id="email" placeholder="Enter email" name="email">
+                    <input type="text" class="form-control text-center" id="email" placeholder="Enter email" name="email"  required>
                 </div>
                 <div class="col-sm-1">
                     <label for="username" class="form-label">Username:</label>
                 </div>
                 <div class="col-sm-5">
-                    <input type="text" class="form-control text-center" id="username" placeholder="Enter username" name="username">
+                    <input type="text" class="form-control text-center" id="username" placeholder="Enter username" name="username" required>
                 </div>
             </div>
             <!-- Second Row -->
@@ -28,13 +28,13 @@ class contents
                     <label for="fname" class="form-label">First Name:</label>
                 </div>
                 <div class="col-sm-5">
-                    <input type="text" class="form-control text-center" id="fname" placeholder="Enter first name" name="fname">
+                    <input type="text" class="form-control text-center" id="fname" placeholder="Enter first name" name="fname" required>
                 </div>
                 <div class="col-sm-1">
                     <label for="surname" class="form-label">Surname:</label>
                 </div>
                 <div class="col-sm-5">
-                    <input type="text" class="form-control text-center" id="surname" placeholder="Enter surname" name="surname">
+                    <input type="text" class="form-control text-center" id="surname" placeholder="Enter surname" name="surname" required>
                 </div>
             </div>
             <!-- Third Row -->
@@ -43,13 +43,13 @@ class contents
                     <label for="fname" class="form-label">Password:</label>
                 </div>
                 <div class="col-sm-5">
-                    <input type="password" class="form-control text-center" id="password" placeholder="Enter password" name="fname">
+                    <input type="password" class="form-control text-center" id="password" placeholder="Enter password" name="fname" required>
                 </div>
                 <div class="col-sm-1">
                     <label for="confirmPassword" class="form-label">Confirm Password:</label>
                 </div>
                 <div class="col-sm-5">
-                    <input type="password" class="form-control text-center" id="confirmPassword" name="confirmPassword">
+                    <input type="password" class="form-control text-center" id="confirmPassword" name="confirmPassword" required>
                 </div>
             </div>
             <!-- Fourth Row - Button -->
