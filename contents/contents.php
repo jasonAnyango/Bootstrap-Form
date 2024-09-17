@@ -6,7 +6,7 @@ class contents
     {
         ?>
         <div class="container mb-5">
-        <form action="" style = "border: 1px solid #000;" class="p-5 rounded">
+        <form action="database/processForm.php" method="post" style = "border: 1px solid #000;" class="p-5 rounded">
             <!-- First Row -->
             <div class="row mb-5 mt-5">
                 <div class="col-sm-1">
