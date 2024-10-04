@@ -7,55 +7,37 @@ class contents
         ?>
         <div class="container mb-5">
         <form action="database/processForm.php" method="post" style = "border: 1px solid #000;" class="p-5 rounded">
-            <!-- First Row -->
+            <!-- Email Row -->
             <div class="row mb-5 mt-5">
                 <div class="col-sm-1">
                     <label for="email" class="form-label">Email:</label>
                 </div>
-                <div class="col-sm-5">
+                <div class="col-sm-11">
                     <input type="text" class="form-control text-center" id="email" placeholder="Enter email" name="email"  required>
                 </div>
+            </div>
+            <!-- Full Name Row -->
+            <div class="row mb-5 mt-5">
                 <div class="col-sm-1">
+                    <label for="fullname" class="form-label">Full Name: </label>
+                </div>
+                <div class="col-sm-11">
+                    <input type="text" class="form-control text-center" id="fullname" placeholder="Enter full name" name="fullname" required>
+                </div>
+            </div>
+            <!-- Username Row -->
+            <div class="row mb-5 mt-5">
+            <div class="col-sm-1">
                     <label for="username" class="form-label">Username:</label>
                 </div>
-                <div class="col-sm-5">
+                <div class="col-sm-11">
                     <input type="text" class="form-control text-center" id="username" placeholder="Enter username" name="username" required>
                 </div>
             </div>
-            <!-- Second Row -->
-            <div class="row mb-5 mt-5">
-                <div class="col-sm-1">
-                    <label for="fname" class="form-label">First Name:</label>
-                </div>
-                <div class="col-sm-5">
-                    <input type="text" class="form-control text-center" id="fname" placeholder="Enter first name" name="fname" required>
-                </div>
-                <div class="col-sm-1">
-                    <label for="surname" class="form-label">Surname:</label>
-                </div>
-                <div class="col-sm-5">
-                    <input type="text" class="form-control text-center" id="surname" placeholder="Enter surname" name="surname" required>
-                </div>
-            </div>
-            <!-- Third Row -->
-            <div class="row mb-5 mt-5">
-                <div class="col-sm-1">
-                    <label for="fname" class="form-label">Password:</label>
-                </div>
-                <div class="col-sm-5">
-                    <input type="password" class="form-control text-center" id="password" placeholder="Enter password" name="fname" required>
-                </div>
-                <div class="col-sm-1">
-                    <label for="confirmPassword" class="form-label">Confirm Password:</label>
-                </div>
-                <div class="col-sm-5">
-                    <input type="password" class="form-control text-center" id="confirmPassword" name="confirmPassword" required>
-                </div>
-            </div>
-            <!-- Fourth Row - Button -->
-            <div class="row mb-5 mt-5 container">
-                <div class="col-sm-12">
-                    <button type="submit" class="btn btn-dark w-100">Sign Up</button>
+            <!-- Button Row -->
+            <div class="row mb-2 mt-5 container d-flex justify-content-center">
+                <div class="col-sm-2">
+                    <button type="submit" class="btn btn-dark w-100 rounded-0">SIGN UP </button>
                 </div>
             </div>
         </form>
