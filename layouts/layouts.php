@@ -12,8 +12,7 @@ class layouts
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <!-- Bootstrap CSS -->
-                <link href="css/style.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-                <link rel="stylesheet" href="styles/custom.css">
+                <link href="css/style.css" rel="stylesheet">
                 <link rel="icon"  href="img/report.png">
                 <title>Sign Up</title>
             </head>
