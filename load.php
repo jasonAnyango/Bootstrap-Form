@@ -7,7 +7,7 @@ require "includes/constants.php";
 function classAutoLoad($className)
 {
     // The different folders containing the classes
-    $directories = ["contents", "menus", "layouts"];
+    $directories = ["contents", "menus", "layouts", "database"];
     // Loop through the folders
     foreach($directories as $dir)
     {
@@ -24,7 +24,6 @@ function classAutoLoad($className)
 
 // Automatically load the required files
 spl_autoload_register('classAutoLoad');
-
 // Create instances of all the classes
 $menuObj = new menus();
 $layoutsObj = new layouts();

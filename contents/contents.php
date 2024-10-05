@@ -6,7 +6,7 @@ class contents
     {
         ?>
         <div class="container mb-5">
-        <form action="database/processForm.php" method="post" style = "border: 1px solid #000;" class="p-5 rounded">
+        <form action="<?php print basename($_SERVER['PHP_SELF']) ?>" method="post" style = "border: 1px solid #000;" class="p-5 rounded">
             <!-- Email Row -->
             <div class="row mb-5 mt-5">
                 <div class="col-sm-1">
