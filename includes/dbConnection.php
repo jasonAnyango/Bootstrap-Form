@@ -81,4 +81,15 @@ class dbConnection
             echo "Insert Failed 😞: " . "<br>" . $pdoError;
         }
     }
+
+    // Count Results Function
+    public function countResults($sql)
+    {
+        // We're using PDO, no need for MySQLi
+        // Prepare the statement for counting
+        $result = $this->connection->prepare($sql);
+        $result->execute();
+        // Return the number of rows affected.
+        return $result->rowCount();
+    }
 }
