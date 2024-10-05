@@ -10,11 +10,10 @@ class processForm
             $fullname = $_POST['fullname'];
             $email = $_POST['email'];
             $username = $_POST['username'];
-            
-            // Initialize errors array
-            $errors = array();
 
             // Input Validation
+            // Initialize errors array
+            $errors = array();
 
             // 1. Fullname
             // 1A. Remove "/"s
@@ -52,6 +51,20 @@ class processForm
             {
                 $errors['duplicateEmailError'] = "Email already in use";
             }
+
+            // 3. Username
+            // 3A. Check if Username has only alphabetical characters
+            if(!ctype_alpha($username))
+            {
+                $errors['usernameLettersError'] = "Username can only contain letters";
+            }
+            // 3B. Check if Username is already in the database --> Same method as email
+            $usernameCheck = $conn->countResults(sprintf("SELECT username FROM users WHERE username = %s", $username));
+            if($usernameCheck > 0)
+            {
+                $errors['duplicateUsernameError'] = "Username already in use";
+            }
+
 
 
 
