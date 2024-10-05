@@ -1,5 +1,9 @@
 <?php
-
+// Start the session
+session_start();
+// Include files
+require "includes/dbConnection.php";
+require "includes/constants.php";
 function classAutoLoad($className)
 {
     // The different folders containing the classes
@@ -26,3 +30,10 @@ $menuObj = new menus();
 $layoutsObj = new layouts();
 $headingsObj = new headings();
 $contentsObj = new contents();
+// Connection Object
+$conn = new dbConnection(dbType, hostName, hostUser, hostPass, dbName);
+
+// Create instance of processForm
+$processObj = new processForm();
+// Call the signup function
+$processObj->signup($conn);

@@ -18,7 +18,7 @@ class dbConnection
         $this->dbUser = $dbUser;
         $this->dbPass = $dbPass;
         $this->dbName = $dbName;
-        // Call the connection function -- Below
+        // Call the connection function
         $this->connection($dbType, $dbHost ,$dbUser, $dbPass, $dbName);
     }
 
@@ -30,13 +30,7 @@ class dbConnection
                 try
                 {
                     // Create PDO object and assign it to the connection variable
-                    $this->connection = new PDO(
-                    "mysql:
-                    host = $dbHost;
-                    dbname = $dbName",
-                    $dbUser,
-                    $dbPass);
-
+                    $this->connection = new PDO("mysql:host=$dbHost;dbname=$dbName", $dbUser, $dbPass);
                     // Set the error mode to exception
                     $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                     // Print success message
@@ -45,7 +39,7 @@ class dbConnection
                 catch(PDOException $pdoError)
                 {
                     // Print error message
-                    echo "Connection Failed 😞: " . "<br>" . $pdoError->getMessage();
+                    echo "Connection Failed 😞: " . "<br>" . $pdoError;
                 }
                 // Break the case
                 break;

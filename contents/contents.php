@@ -37,7 +37,7 @@ class contents
             <!-- Button Row -->
             <div class="row mb-2 mt-5 container d-flex justify-content-center">
                 <div class="col-sm-2">
-                    <button type="submit" class="btn btn-dark w-100 rounded-0">SIGN UP </button>
+                    <button type="submit" class="btn btn-dark w-100 rounded-0" name="signup">SIGN UP </button>
                 </div>
             </div>
         </form>

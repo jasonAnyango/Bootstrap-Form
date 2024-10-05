@@ -1,7 +1,8 @@
 <?php
-// Create database constants
-define("dbType", "PDO");
-define("hostName", "127.0.0.1");
-define("hostUser", "root");
-define("hostPass", "mySQLPass_11!");
-define("dbName", "");
+// Creating constants
+define("dbType","PDO");
+define("hostName","localhost:3307");
+define("dbPort","3307");
+define("hostUser","root");
+define("hostPass","mySQLpass_11!");
+define("dbName","assignment2");
