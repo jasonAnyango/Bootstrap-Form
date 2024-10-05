@@ -2,7 +2,7 @@
 
 class processForm
 {
-    public function signup($conn)
+    public function signup($conn, $globalObj)
     {
         if(isset($_POST['signup']))
         {
@@ -64,29 +64,32 @@ class processForm
             {
                 $errors['duplicateUsernameError'] = "Username already in use";
             }
-
-
-
-
-
-            // Make arrays
-            $columns = ['fullname', 'email', 'username'];
-            $values = [$fullname, $email, $username];
-
-            // Combine arrays
-            $data = array_combine($columns, $values);
-
-            // Insert into database
-            $insert  = $conn->insert('users', $data);
-
-            // Check if the insert is valid
-            if($insert === true)
+            
+            // Check if any errors were found
+            if(count($errors) > 0)
             {
-                header("Location: signUp.php");
+                // Set the error messages
+                $globalObj->setMsg('Message', 'Error(s)', 'invalid');
+                $globalObj->setMsg('Errors', $errors, 'invalid');
             }
             else
-            {
-                die($insert);
+            {  
+                // Make arrays
+                $columns = ['fullname', 'email', 'username'];
+                $values = [$fullname, $email, $username];
+                // Combine arrays
+                $data = array_combine($columns, $values);
+                // Insert into database
+                $insert  = $conn->insert('users', $data);
+                // Check if the insert is valid
+                if($insert === true)
+                {
+                    header("Location: signUp.php");
+                }
+                else
+                {
+                    die($insert);
+                }   
             }
         }
     }
