@@ -92,4 +92,13 @@ class dbConnection
         // Return the number of rows affected.
         return $result->rowCount();
     }
+
+    // Function to add / to characters that need to be escaped
+    public function escapeValues($postValues)
+    {
+        // Again, just PDO
+        $this->postValues = addslashes($postValues);
+        return $this->postValues;
+        
+    }
 }

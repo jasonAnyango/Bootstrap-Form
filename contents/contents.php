@@ -10,7 +10,7 @@ class contents
             print $globalObj->getMsg('Message');
             $errors = $globalObj->getMsg('errors');
         ?>
-        <form action="<?php print basename($_SERVER['PHP_SELF']) ?>" method="post" style = "border: 3px ridge goldenrod;" class="p-5 rounded">
+        <form action="<?php print basename($_SERVER['PHP_SELF']) ?>" method="post" class="p-5">
             <!-- Email Row -->
             <div class="row mb-5 mt-5">
                 <div class="col-sm-2">
