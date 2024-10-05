@@ -27,7 +27,33 @@ class processForm
                 $errors['nameLettersError'] = "Full name can only contain letters";
             }
 
-            
+            // 2. Email
+            // 2.A Verify Email Format
+            if(!filter_var($email, FILTER_VALIDATE_EMAIL))
+            {
+                $errors['emailFormatError'] = "Invalid email format";
+            }
+            // 2.B Verify Email Domain
+            // Initialize array of valid domains
+            $validDomains = ['gmail.com', 'strathmore.edu', 'yahoo.com', 'outlook.com'];
+            // Split email into parts
+            $emailArray = explode("@", $email);
+            // Get email domain
+            $domain = $emailArray[1];
+            // Check if domain is valid
+            if(!in_array($domain, $validDomains))
+            {
+                $errors['emailDomainError'] = "Invalid email domain";
+            }
+            // 2C. Check if email is already in the database
+            // Get number of matching emails in database
+            $emailCheck = $conn->countResults(sprintf("SELECT * FROM users WHERE email = '%s'", $email));
+            if($emailCheck > 0)
+            {
+                $errors['duplicateEmailError'] = "Email already in use";
+            }
+
+
 
 
             // Make arrays
