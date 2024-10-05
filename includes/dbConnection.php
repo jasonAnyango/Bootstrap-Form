@@ -30,7 +30,8 @@ class dbConnection
                 try
                 {
                     // Create PDO object and assign it to the connection variable
-                    $this->connection = new PDO("mysql:
+                    $this->connection = new PDO(
+                    "mysql:
                     host = $dbHost;
                     dbname = $dbName",
                     $dbUser,
