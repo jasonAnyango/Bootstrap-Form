@@ -24,7 +24,7 @@ class layouts
     public function footer()
     {
         ?>
-            <div class="container-fluid text-bg-dark text-center mt-auto p-2">
+            <div class="container-fluid text-bg-dark text-warning text-center mt-auto p-2">
                 <p>Jason Anyango Copyright &copy; <?php echo date('Y') ?></p>
             </div>
 

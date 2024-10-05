@@ -34,12 +34,12 @@ class dbConnection
                     // Set the error mode to exception
                     $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                     // Print success message
-                    echo "Connected successfully 😁 <br>";
+                    // echo "Connected successfully 😁 <br>";
                 }
                 catch(PDOException $pdoError)
                 {
                     // Print error message
-                    echo "Connection Failed 😞: " . "<br>" . $pdoError;
+                    // echo "Connection Failed 😞: " . "<br>" . $pdoError;
                 }
                 // Break the case
                 break;

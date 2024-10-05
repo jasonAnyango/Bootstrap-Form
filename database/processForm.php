@@ -59,21 +59,17 @@ class processForm
                 $errors['usernameLettersError'] = "Username can only contain letters";
             }
             // 3B. Check if Username is already in the database --> Same method as email
-            $usernameCheck = $conn->countResults(sprintf("SELECT username FROM users WHERE username = %s", $username));
+            $usernameCheck = $conn->countResults(sprintf("SELECT username FROM users WHERE username = '%s'", $username));
             if($usernameCheck > 0)
             {
                 $errors['duplicateUsernameError'] = "Username already in use";
             }
-            
+
             // Check if any errors were found
-            if(count($errors) > 0)
+            if(!count($errors))
             {
-                // Set the error messages
-                $globalObj->setMsg('Message', 'Error(s)', 'invalid');
-                $globalObj->setMsg('Errors', $errors, 'invalid');
-            }
-            else
-            {  
+                // Set success message
+                $globalObj->setMsg('Message', 'Sign Up Successful', 'text-success');
                 // Make arrays
                 $columns = ['fullname', 'email', 'username'];
                 $values = [$fullname, $email, $username];
@@ -81,7 +77,7 @@ class processForm
                 $data = array_combine($columns, $values);
                 // Insert into database
                 $insert  = $conn->insert('users', $data);
-                // Check if the insert is valid
+                // Check if the insert executed successfully
                 if($insert === true)
                 {
                     header("Location: signUp.php");
@@ -90,6 +86,13 @@ class processForm
                 {
                     die($insert);
                 }   
+            }
+            else
+            {
+                // Set the error messages
+                $globalObj->setMsg('Message', 'Error(s) found', 'invalid');
+                // $globalObj->setMsg('Errors', $errors, 'invalid');
+                $_SESSION['errors'] = $errors;
             }
         }
     }

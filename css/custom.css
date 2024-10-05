@@ -1,5 +1,14 @@
+*
+{
+    font-family: 'Montserrat';
+}
 .nav-link:hover
 {
     transition: .3s ease-in;
     font-weight: bold;
+}
+
+.invalid
+{
+    color: #ca1800;
 }

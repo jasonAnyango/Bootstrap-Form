@@ -11,7 +11,7 @@ class menus
                         <ul class="nav d-flex align-items-center">
                             <li class="nav-item d-flex align-items-center">
                                 <img src="img/logo.png" alt="">
-                                <a href="" class="nav-link text-light navbar-brand">MyForm</a>
+                                <a href="" class="nav-link text-warning fw-bold navbar-brand">MY-FORM</a>
                             </li>
                             <li class="nav-item">
                                 <a href="" class="nav-link text-light">Form</a>

@@ -23,5 +23,6 @@ class fncs
             unset($_SESSION[$name]);
             return $session;
         }
+        return null;
     }
 }

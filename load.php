@@ -1,6 +1,4 @@
 <?php
-// Start the session
-session_start();
 // Include files
 require "includes/dbConnection.php";
 require "includes/constants.php";
@@ -37,4 +35,4 @@ $conn = new dbConnection(dbType, hostName, hostUser, hostPass, dbName);
 // Create instance of processForm
 $processObj = new processForm();
 // Call the signup function
-$processObj->signup($conn);
+$processObj->signup($conn, $globalObj);

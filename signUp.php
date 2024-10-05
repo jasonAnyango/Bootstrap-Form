@@ -11,6 +11,6 @@ $menuObj->navMenu();
 // The signUpBanner function
 $headingsObj->signUpBanner();
 // The formContent function
-$contentsObj->formContent();
+$contentsObj->signUpForm($globalObj);
 //  The footer function
 $layoutsObj->footer();
