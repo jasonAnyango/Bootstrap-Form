@@ -14,4 +14,14 @@ class fncs
             $_SESSION[$name] = '<span class = "' . $class . '">' . $values . '</span>';
         }
     }
+
+    public function getMsg($name)
+    {
+        if(isset($_SESSION[$name]))
+        {
+            $session = $_SESSION[$name];
+            unset($_SESSION[$name]);
+            return $session;
+        }
+    }
 }
