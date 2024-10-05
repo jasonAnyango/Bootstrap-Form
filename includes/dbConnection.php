@@ -68,14 +68,12 @@ class dbConnection
     {
         ksort($data);
         $fieldNames = implode('`, `', array_keys($data));
-        $fieldValues = implode('`, `', array_values($data));
-        $sql = "INSERT INTO $table (`$fieldNames`) VALUES (`$fieldValues`)";
-
+        $fieldValues = implode("', '", array_values($data));
+        $sql = "INSERT INTO $table (`$fieldNames`)  VALUES ('$fieldValues')"; 
         // Since we're using PDO...
         try
         {
             $this->connection->exec($sql);
-            echo "Insert Successful 😁";
             return true;
         }
         catch(PDOException $pdoError)
